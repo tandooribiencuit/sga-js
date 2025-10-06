@@ -1,4 +1,4 @@
-// définition des individ
+// définition des individus
 
 var genNumber = 0; // nombre de gènes
 var individuSize = 0; // taille d'un individu
