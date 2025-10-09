@@ -53,3 +53,27 @@ function Individu() {
     this.phenotype_D = decodeGenotypeCercle(this.genotype);
     this.fitness = fitness(this.phenotype);
 }
+
+// function decodeGenotype : convertie un génotype en entier
+function decodeGenotypeCercle(genotype) {
+    var x = [];
+    var offset = 0;
+    
+    // console.log(genNumber);
+
+    for (var i = 0; i < genNumber; i++) {
+        var geneSize = genes[i].size;
+        // console.log(geneSize);
+
+        var gene = genotype.slice(offset, offset + geneSize);
+        // console.log(gene);
+        x.push(genes[1].decode(gene));
+        offset += geneSize;
+        if (i == 0) {
+            x[0] = decodeA(x[0]);
+        }
+        if (i == 1) {
+            x[1] = decodeB(x[0], x[1]);
+        }
+    return x;
+}
