@@ -41,12 +41,15 @@ function decodeGenotype(genotype) {
 }
 
 
+
 // defini un individu avec un génotype et un phénotype
 function Individu() {
     this.genotype = [];
     this.phenotype = [];
+    this.phenotype_D = [];
     this.fitness = 0;
     this.genotype = randomGenotype();
     this.phenotype = decodeGenotype(this.genotype);
+    this.phenotype_D = decodeGenotypeCercle(this.genotype);
     this.fitness = fitness(this.phenotype);
 }

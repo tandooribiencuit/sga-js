@@ -129,6 +129,7 @@ function affichePopulation() {
         txt += "<td>" + i + "</td>";
         txt += "<td>" + population[i].genotype + "</td>";
         txt += "<td>" + population[i].phenotype + "</td>";
+        txt += "<td>" + population[i].phenotype_D + "</td>";
         txt += "<td>" + population[i].fitness + "</td>";
         txt += "</tr>";
     }
@@ -259,6 +260,8 @@ function lance() {
             // decodage et calcul du fitness
             child1.phenotype = decodeGenotype(child1.genotype);
             child2.phenotype = decodeGenotype(child2.genotype);
+            child1.phenotype_D = decodeGenotypeCercle(child1.genotype);
+            child2.phenotype_D = decodeGenotypeCercle(child2.genotype);
 
             // evaluation
             child1.fitness = fitness(child1.phenotype);
