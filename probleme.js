@@ -6,7 +6,7 @@ function decodeA(val_a) {
     return(Math.round((val_a*10))/10);
 }
 function decodeB(val_a, val_B) {
-    return(Math.round((((80 - val_a)/1000)*val_B + 10)*10)/10);
+    return(Math.round(((80 - val_a)*(val_B/100) + 10)*10)/10);
 }
 
 function decodeC(val_a, val_b) {

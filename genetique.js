@@ -225,9 +225,9 @@ function lance() {
     createPopulation();
     
     // premier tri de la population par fitness
-    population.sort(function(a, b) {
-        return b.fitness - a.fitness;
-    });
+    //population.sort(function(a, b) {
+    //    return b.fitness - a.fitness;
+    //});
 
     // Boucle principale de l'algo Génétique
     while (generation < maxGeneration) { //maxGeneration 
@@ -282,9 +282,9 @@ function lance() {
         population = newPopulation;
 
         // trie de la population par fitness
-        population.sort(function(a, b) {
-            return b.fitness - a.fitness;
-        });
+        // population.sort(function(a, b) {
+        //    return b.fitness - a.fitness;
+        // });
 
         // Increment the generation counter
         generation++;
