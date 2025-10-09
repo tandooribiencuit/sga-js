@@ -40,20 +40,6 @@ function decodeGenotype(genotype) {
     return x;
 }
 
-
-
-// defini un individu avec un génotype et un phénotype
-function Individu() {
-    this.genotype = [];
-    this.phenotype = [];
-    this.phenotype_D = [];
-    this.fitness = 0;
-    this.genotype = randomGenotype();
-    this.phenotype = decodeGenotype(this.genotype);
-    this.phenotype_D = decodeGenotypeCercle(this.genotype);
-    this.fitness = fitness(this.phenotype);
-}
-
 // function decodeGenotype : convertie un génotype en entier
 function decodeGenotypeCercle(genotype) {
     var x = [];
@@ -78,5 +64,16 @@ function decodeGenotypeCercle(genotype) {
     }
     x.push(decodeC(x[0], x[1]));
     return x;
-
 }
+// defini un individu avec un génotype et un phénotype
+function Individu() {
+    this.genotype = [];
+    this.phenotype = [];
+    this.phenotype_D = [];
+    this.fitness = 0;
+    this.genotype = randomGenotype();
+    this.phenotype = decodeGenotype(this.genotype);
+    this.phenotype_D = decodeGenotypeCercle(this.genotype);
+    this.fitness = fitness(this.phenotype);
+}
+

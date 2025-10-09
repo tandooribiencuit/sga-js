@@ -123,7 +123,7 @@ function affichePopulation() {
     // console.log("---  " + population);
 
     var txt = "<table>";
-    txt += "<tr><th>Individu</th><th>Genotype</th><th>Phenotype</th><th>Fitness</th></tr>";
+    txt += "<tr><th>Individu</th><th>Genotype</th><th>Phenotype</th><th>Phenotype_D</th><th>Fitness</th></tr>";
     for (var i = 0; i < populationSize; i++) {
         txt += "<tr>";
         txt += "<td>" + i + "</td>";
