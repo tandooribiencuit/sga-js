@@ -77,3 +77,4 @@ function decodeGenotypeCercle(genotype) {
         }
     return x;
 }
+}
