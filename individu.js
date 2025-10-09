@@ -62,9 +62,9 @@ function decodeGenotypeCercle(genotype) {
             x[1] = decodeB(x[0], x[1]);
         }
     }
+    x.push(decodeC(x[0], x[1]));
     return x;
 }
-
 // defini un individu avec un génotype et un phénotype
 function Individu() {
     this.genotype = [];
