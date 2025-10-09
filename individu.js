@@ -34,7 +34,7 @@ function decodeGenotype(genotype) {
 
         var gene = genotype.slice(offset, offset + geneSize);
         // console.log(gene);
-        x.push(genes[1].decode(gene));
+        x.push(genes[i].decode(gene));
         offset += geneSize;
     }
     return x;
@@ -53,7 +53,7 @@ function decodeGenotypeCercle(genotype) {
 
         var gene = genotype.slice(offset, offset + geneSize);
         // console.log(gene);
-        x.push(genes[1].decode(gene));
+        x.push(genes[i].decode(gene));
         offset += geneSize;
         if (i == 0) {
             x[0] = decodeA(x[0]);

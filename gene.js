@@ -13,7 +13,7 @@ function Gene(bmin, bmax, precision ) {
     // fonction de décodage
     this.decode = function(bits) {
         var entier = parseInt(bits.join(''), 2); // conversion d'un tableau de bits en entier
-        var x = this.bmin + entier * (this.bmax - this.bmin) / (Math.pow(2, this.size) - 1);
+        var x = this.bmin + ((entier * (this.bmax - this.bmin)) / (Math.pow(2, this.size) - 1));
         return x;
     }
     

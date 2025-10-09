@@ -23,5 +23,8 @@ genes.push(new Gene(0, 100, 0.1));
 
 // fonction fitness : fonction à optimiser
 function fitness(x) {
-    return (Math.round((PIarea(50)-PIarea(decodeA(x[0])/2)-PIarea(decodeB(decodeA(x[0]),x[1])/2)-PIarea(decodeC(decodeA(x[0]),decodeB(decodeA(x[0]),x[1]))/2))*10)/10);
+    const a = decodeA(x[0]);
+    const b = decodeB(a, x[1]);
+    const c = decodeC(a, b);
+    return (Math.round((PIarea(50) - (PIarea(a/2) + PIarea(b/2) + PIarea(c/2)))*10)/10);
 }
