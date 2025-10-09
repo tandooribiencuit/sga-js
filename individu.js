@@ -75,6 +75,8 @@ function decodeGenotypeCercle(genotype) {
         if (i == 1) {
             x[1] = decodeB(x[0], x[1]);
         }
+    }
+    x.push(decodeC(x[0], x[1]));
     return x;
-}
+
 }
