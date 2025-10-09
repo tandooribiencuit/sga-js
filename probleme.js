@@ -13,11 +13,15 @@ function decodeC(val_a, val_b) {
     return(100 - val_a - val_b);
 }
 
+function PIarea(r) {
+    return (Math.PI * Math.pow(r, 2));
+}
+
 // définition des genes
 genes.push(new Gene(10, 80, 0.1));
 genes.push(new Gene(0, 100, 0.1));
 
 // fonction fitness : fonction à optimiser
 function fitness(x) {
-    return (x[0] * x[1] *x[2])/(x[0] + x[1] + x[2] + 1);
+    return (PIarea(50)-PIarea(decodeA(x[0])/2)-PIarea(decodeB(decodeA(x[0]),x[1])/2)-PIarea(decodeC(decodeA(x[0]),decodeB(decodeA(x[0]),x[1]))/2));
 }
