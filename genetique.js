@@ -123,13 +123,15 @@ function affichePopulation() {
     // console.log("---  " + population);
 
     var txt = "<table>";
-    txt += "<tr><th>Individu</th><th>Genotype</th><th>Phenotype</th><th>Phenotype_D</th><th>Fitness</th></tr>";
+    txt += "<tr><th>Individu</th><th>Genotype</th><th>Rayon A</th><th>Rayon B</th><th>Rayon C</th><th>Aire</th></tr>";
     for (var i = 0; i < populationSize; i++) {
         txt += "<tr>";
         txt += "<td>" + i + "</td>";
         txt += "<td>" + population[i].genotype + "</td>";
-        txt += "<td>" + population[i].phenotype + "</td>";
-        txt += "<td>" + population[i].phenotype_D + "</td>";
+        //txt += "<td>" + population[i].phenotype + "</td>";
+        txt += "<td>" + population[i].phenotype_D[0] + "</td>";
+        txt += "<td>" + population[i].phenotype_D[1] + "</td>";
+        txt += "<td>" + population[i].phenotype_D[2] + "</td>";
         txt += "<td>" + population[i].fitness + "</td>";
         txt += "</tr>";
     }
